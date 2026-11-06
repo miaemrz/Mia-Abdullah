@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mia Emmylia — Finance graduate portfolio, internship experience, projects and leadership.">
+<title>Mia Emmylia | Finance Portfolio</title>
+<style>
+:root{
+  --ink:#12232d; --ink2:#1a3440; --teal:#72d6c2; --teal2:#b7eee2;
+  --cream:#f4f1e9; --paper:#fffdf8; --muted:#b9c7c8; --line:rgba(255,255,255,.14);
+  --coral:#f0a28a; --gold:#e8c77c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(18,35,45,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navinner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:.04em;font-size:1rem}
+.brand span{color:var(--teal)}
+.navlinks{display:flex;gap:26px;font-size:.86rem;color:var(--muted)}
+.navlinks a:hover{color:var(--teal)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--cream);border-radius:10px;padding:7px 11px}
+.hero{padding:92px 0 86px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(114,214,194,.13);border-radius:50%;right:-170px;top:-170px;box-shadow:0 0 0 42px rgba(114,214,194,.025),0 0 0 90px rgba(114,214,194,.02)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;position:relative}
+.eyebrow{color:var(--teal);text-transform:uppercase;letter-spacing:.19em;font-size:.72rem;font-weight:800}
+h1{font-size:clamp(3.1rem,7vw,6.2rem);line-height:.98;letter-spacing:-.065em;margin:18px 0 24px;max-width:750px}
+h1 em{font-family:Georgia,serif;color:var(--teal);font-weight:400}
+.lead{font-size:1.12rem;color:#d4dfdc;max-width:620px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:999px;font-weight:750;font-size:.9rem;transition:.2s}
+.btn-primary{background:var(--teal);color:var(--ink)}
+.btn-primary:hover{transform:translateY(-2px);background:var(--teal2)}
+.btn-ghost{border:1px solid rgba(255,255,255,.28);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.hero-art{min-height:350px;display:grid;place-items:center;position:relative}
+.art-card{width:min(100%,370px);aspect-ratio: .9;background:linear-gradient(145deg,#244653,#172c37);border:1px solid rgba(183,238,226,.22);border-radius:28px;padding:26px;transform:rotate(3deg);box-shadow:0 28px 70px rgba(0,0,0,.25);position:relative}
+.art-label{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal2)}
+.art-title{font:2rem Georgia,serif;margin-top:18px;max-width:220px}
+.chart{position:absolute;left:26px;right:26px;bottom:28px;height:135px;border-bottom:1px solid rgba(255,255,255,.3);display:flex;align-items:end;gap:13px;padding:0 8px}
+.bar{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(180deg,var(--teal),#3d8e85);opacity:.92}
+.bar:nth-child(1){height:38%}.bar:nth-child(2){height:62%}.bar:nth-child(3){height:49%}.bar:nth-child(4){height:78%}.bar:nth-child(5){height:66%}.bar:nth-child(6){height:96%}
+.spark{position:absolute;right:-15px;top:34px;width:100px;height:100px;border-radius:50%;background:var(--coral);display:grid;place-items:center;color:var(--ink);font-size:2.5rem;box-shadow:0 15px 30px rgba(0,0,0,.2)}
+.note{position:absolute;left:-18px;bottom:28px;background:var(--cream);color:var(--ink);padding:13px 17px;border-radius:14px;font-size:.78rem;font-weight:800;transform:rotate(-5deg)}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding:23px 0;gap:18px}
+.stat strong{display:block;color:var(--teal);font-size:1.2rem}.stat span{font-size:.78rem;color:var(--muted)}
+section{padding:84px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}
+.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--teal);font-weight:800}
+h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.045em;line-height:1.05;margin:10px 0 0}
+.section-intro{max-width:390px;color:var(--muted);font-size:.94rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about-copy{font-size:1.08rem;color:#d8e0dc}
+.about-copy p{margin-top:0}
+.pullquote{border-left:3px solid var(--teal);padding:8px 0 8px 20px;color:var(--teal2);font:1.35rem/1.4 Georgia,serif;margin-top:28px}
+.focus-card{background:var(--paper);color:var(--ink);padding:28px;border-radius:22px}
+.focus-card h3{font-size:1rem;margin:0 0 16px}
+.pills{display:flex;gap:9px;flex-wrap:wrap}
+.pill{background:#e4f2ed;color:#21443f;padding:8px 12px;border-radius:999px;font-size:.78rem;font-weight:700}
+.small-note{color:#61716e;font-size:.82rem;margin:18px 0 0}
+.experience{background:#172c37}
+.timeline{display:grid;grid-template-columns:190px 1fr;gap:30px;border-top:1px solid var(--line);padding:30px 0}
+.timeline-date{color:var(--teal);font-size:.82rem;font-weight:800}
+.timeline h3{font-size:1.35rem;margin:0 0 4px}
+.company{color:var(--muted);font-size:.9rem;margin-bottom:15px}
+.timeline p{color:#d0dbd8;margin:0 0 13px}
+ul.clean{padding-left:18px;margin:10px 0;color:#d0dbd8}
+ul.clean li{padding:4px 0}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{border:1px solid rgba(114,214,194,.3);color:var(--teal2);border-radius:999px;padding:5px 10px;font-size:.72rem}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{background:#1b3541;border:1px solid var(--line);border-radius:22px;padding:25px;min-height:260px;position:relative;overflow:hidden}
+.project:after{content:"";position:absolute;width:140px;height:140px;border:1px solid rgba(114,214,194,.16);border-radius:50%;right:-50px;bottom:-55px;box-shadow:0 0 0 18px rgba(114,214,194,.025)}
+.project-top{display:flex;justify-content:space-between;align-items:center;color:var(--teal);font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.project-icon{font-size:1.45rem}
+.project h3{font-size:1.35rem;line-height:1.2;margin:24px 0 12px;max-width:420px}
+.project p{color:#c6d3d0;font-size:.91rem;max-width:490px}
+.project .tag{border-color:rgba(255,255,255,.18);color:#d9e5e1}
+.project.light{background:var(--paper);color:var(--ink)}
+.project.light p{color:#52635f}.project.light .tag{border-color:#c7d8d1;color:#365b51}
+.project.light .project-top{color:#347e70}
+.leadership{background:var(--cream);color:var(--ink)}
+.leadership .section-intro{color:#63716d}
+.roles{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.role{border:1px solid #d7ddd5;border-radius:18px;padding:23px;background:rgba(255,255,255,.5)}
+.role .role-no{font:1.7rem Georgia,serif;color:#458c7c}
+.role h3{font-size:1.08rem;margin:10px 0 4px}
+.role p{color:#5c6b66;font-size:.88rem;margin:0}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skillbox{border:1px solid var(--line);border-radius:18px;padding:22px}
+.skillbox h3{color:var(--teal);font-size:.95rem;margin:0 0 13px}
+.skillbox p{color:#cbd7d3;font-size:.87rem;margin:0}
+.education{background:#172c37}
+.edu-card{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0}
+.edu-card h3{font-size:1.2rem;margin:0 0 4px}.edu-card p{margin:0;color:var(--muted);font-size:.9rem}
+.edu-year{color:var(--teal);font-weight:800;white-space:nowrap}
+.contact{padding:88px 0 96px}
+.contact-box{border-radius:28px;background:var(--teal);color:var(--ink);padding:clamp(28px,6vw,60px);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.contact-box .kicker{color:#285d55}.contact-box h2{max-width:650px}.contact-box p{max-width:540px;color:#28534d}
+.contact-box .btn{background:var(--ink);color:white}
+footer{padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.edit-hint{font-size:.76rem;color:var(--muted);margin-top:18px}
+@media(max-width:800px){
+ .hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding:65px 0}.hero-art{min-height:310px}.section-head{display:block}.section-intro{margin-top:15px}
+ .navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:var(--ink);padding:20px 24px;flex-direction:column;gap:15px;border-bottom:1px solid var(--line)}
+ .navlinks.open{display:flex}.menu{display:block}
+ .timeline{grid-template-columns:1fr;gap:8px}.projects-grid,.roles{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}
+ .contact-box{grid-template-columns:1fr}
+}
+@media(max-width:500px){.wrap{width:min(100% - 32px,1120px)}.stats{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}.edu-card{display:block}.edu-year{display:block;margin-top:10px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navinner">
+  <a class="brand" href="#top">MIA<span>.</span> EMMYLIA</a>
+  <div class="navlinks" id="navlinks">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a>
+  </div>
+  <button class="menu" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Toggle navigation">Menu</button>
+</div></nav>
+<main id="top">
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow">Finance graduate · Aspiring auditor</div>
+    <h1>Numbers with<br><em>purpose.</em></h1>
+    <p class="lead">I’m Mia Emmylia, a finance graduate interested in audit, financial analysis and the details behind reliable business decisions. This is a snapshot of the work, learning and experiences shaping my career.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects">Explore my work <span>↗</span></a>
+      <a class="btn btn-ghost" href="#contact">Let’s connect</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-label="Decorative financial dashboard illustration">
+    <div class="art-card">
+      <div class="art-label">A curious finance mind</div>
+      <div class="art-title">Turning data into direction.</div>
+      <div class="chart"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+    </div>
+    <div class="spark">✳</div><div class="note">ANALYSE · LEARN · IMPROVE</div>
+  </div>
+</div></header>
+<div class="wrap stats">
+  <div class="stat"><strong>Credit to Cash</strong><span>Internship experience at Baxter</span></div>
+  <div class="stat"><strong>Financial analysis</strong><span>Dashboards, ratios and investment simulation</span></div>
+  <div class="stat"><strong>Team leadership</strong><span>Student finance and entrepreneurship roles</span></div>
+</div>
+
+<section id="about"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">01 / A little about me</div><h2>Curious by nature.<br>Grounded in numbers.</h2></div><p class="section-intro">A fresh graduate building a strong foundation in finance, with a growing interest in audit and assurance.</p></div>
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>I recently completed a Bachelor of Business in Finance (Hons.) at Universiti Teknologi MARA (UiTM), where I developed an interest in understanding how financial information supports business performance and decision-making.</p>
+      <p>During my internship at Baxter, I gained exposure to global finance operations through the Cash Application function. My academic projects have also given me opportunities to work with financial data, Excel-based analysis and investment concepts.</p>
+      <p>I’m now looking for an entry-level opportunity where I can keep learning, contribute carefully and develop my career in the finance and audit industry.</p>
+      <div class="pullquote">“Good analysis starts with asking better questions — and checking the details.”</div>
+    </div>
+    <div class="focus-card">
+      <h3>Areas I’m keen to grow in</h3>
+      <div class="pills">
+        <span class="pill">External Audit</span><span class="pill">Financial Reporting</span><span class="pill">Financial Analysis</span><span class="pill">Internal Controls</span><span class="pill">Accounts Receivable</span><span class="pill">Excel & Reporting</span>
+      </div>
+      <p class="small-note">Currently focused on building practical audit knowledge, strengthening technical skills and learning from experienced teams.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="experience" id="experience"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">02 / Experience</div><h2>My first step<br>into global finance.</h2></div><p class="section-intro">An internship that introduced me to the importance of accuracy, collaboration and consistent processes in finance operations.</p></div>
+  <div class="timeline">
+    <div class="timeline-date">31 MAR — 17 JUL 2026</div>
+    <div>
+      <h3>Cash Application Intern</h3>
+      <div class="company">Baxter Healthcare Malaysia · Global Credit to Cash (C2C)</div>
+      <p>Supported the Cash Application team handling customer payments for the US and Canada, helping ensure incoming funds were accurately matched to customer accounts and open invoices.</p>
+      <ul class="clean">
+        <li>Retrieved and reviewed EFT and ACH payment and remittance information.</li>
+        <li>Processed remittance details and supported the application of customer payments against invoices.</li>
+        <li>Worked with the Accounts Receivable team to follow up on cash application matters and posting issues.</li>
+        <li>Gained exposure to JD Edwards (Oracle) and the role of cash application within the wider order-to-cash cycle.</li>
+        <li>Learned to identify payment discrepancies and use chargeback or deduction references to support accurate posting.</li>
+      </ul>
+      <div class="tagrow"><span class="tag">Cash Application</span><span class="tag">EFT & ACH</span><span class="tag">Accounts Receivable</span><span class="tag">JD Edwards / Oracle</span><span class="tag">Reconciliation mindset</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">03 / Selected academic work</div><h2>Projects that made<br>the numbers speak.</h2></div><p class="section-intro">A few practical assignments that demonstrate my interest in financial performance, investment analysis and evidence-based recommendations.</p></div>
+  <div class="projects-grid">
+    <article class="project light">
+      <div class="project-top"><span>Financial analysis · Excel</span><span class="project-icon">▥</span></div>
+      <h3>7-Eleven Financial Performance Dashboard</h3>
+      <p>Created an Excel-based performance dashboard using PivotTables to organise and analyse 7-Eleven company financial data. The work focused on turning raw figures into a clearer view of financial performance and supporting quicker comparison of key information.</p>
+      <div class="tagrow"><span class="tag">Microsoft Excel</span><span class="tag">PivotTables</span><span class="tag">Dashboard reporting</span></div>
+    </article>
+    <article class="project">
+      <div class="project-top"><span>Investment · Bursa Malaysia</span><span class="project-icon">↗</span></div>
+      <h3>Virtual Bursa Malaysia Investment Simulation</h3>
+      <p>Participated in a simulated stock-market investment exercise using virtual funds to explore portfolio decisions. Analysed a selection of listed companies and applied investment measures such as beta, variance, standard deviation and CAPM concepts to assess risk and return.</p>
+      <div class="tagrow"><span class="tag">Portfolio analysis</span><span class="tag">Risk & return</span><span class="tag">CAPM</span></div>
+    </article>
+    <article class="project">
+      <div class="project-top"><span>Financial research · SPSS</span><span class="project-icon">⌁</span></div>
+      <h3>University Students’ Saving Behaviour</h3>
+      <p>Worked on a research assignment examining factors that may influence students’ saving behaviour, including financial literacy, peer influence and lifestyle. Used survey data and SPSS-based analysis to explore relationships between the variables.</p>
+      <div class="tagrow"><span class="tag">SPSS</span><span class="tag">Research</span><span class="tag">Data interpretation</span></div>
+    </article>
+    <article class="project light">
+      <div class="project-top"><span>Accounting & finance · Coursework</span><span class="project-icon">◎</span></div>
+      <h3>Financial Ratio & Company Analysis</h3>
+      <p>Applied financial ratio analysis to evaluate company performance and interpret what the figures indicate about profitability, liquidity, efficiency and financial position. Built confidence in connecting calculations with business context.</p>
+      <div class="tagrow"><span class="tag">Ratio analysis</span><span class="tag">Financial statements</span><span class="tag">Interpretation</span></div>
+    </article>
+  </div>
+  <p class="edit-hint">Project descriptions are written as portfolio summaries. Add the actual assignment files, screenshots or presentation slides when you are ready to showcase the evidence.</p>
+</div></section>
+
+<section class="leadership" id="leadership"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">04 / Leadership & involvement</div><h2>Beyond the<br>classroom.</h2></div><p class="section-intro">Yes — include your club roles. They show responsibility, teamwork, budgeting and communication, all useful in a graduate role.</p></div>
+  <div class="roles">
+    <article class="role"><div class="role-no">01</div><h3>Treasurer · Finance Academic Representative Association</h3><p>Supported programme and uniform budgets, monitored expenses and helped manage funds and cash flow for student activities.</p></article>
+    <article class="role"><div class="role-no">02</div><h3>Head of Economics & Entrepreneurship Exco · City Campus Representative Club</h3><p>Contributed to fundraising sales and student initiatives, coordinated activities and engaged with external organisations for programme-related collaboration.</p></article>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">05 / Skills toolkit</div><h2>What I bring<br>to the table.</h2></div><p class="section-intro">A practical foundation built through coursework, student leadership and hands-on finance operations exposure.</p></div>
+  <div class="skills-grid">
+    <div class="skillbox"><h3>Finance & analysis</h3><p>Financial ratio analysis · Financial performance review · Investment risk and return concepts · Accounts receivable fundamentals</p></div>
+    <div class="skillbox"><h3>Tools & systems</h3><p>Microsoft Excel · PivotTables · Dashboard reporting · SPSS · PowerPoint · JD Edwards (Oracle) exposure</p></div>
+    <div class="skillbox"><h3>Professional strengths</h3><p>Attention to detail · Team collaboration · Organisation · Problem-solving · Presentation · Willingness to learn</p></div>
+  </div>
+  <p class="edit-hint">Keep skill levels honest. Only add advanced Excel functions, audit software or accounting standards once you can confidently discuss and demonstrate them.</p>
+</div></section>
+
+<section class="education"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">06 / Education</div><h2>The foundation.</h2></div></div>
+  <div class="edu-card"><div><h3>Bachelor of Business in Finance (Hons.) — BA272</h3><p>Universiti Teknologi MARA (UiTM), Kota Bharu</p></div><div class="edu-year">2026</div></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="contact-box">
+    <div><div class="kicker">Open to opportunities</div><h2>Let’s make the next step count.</h2><p>I’m interested in graduate opportunities in audit, assurance and finance. If you think my background could be a good fit, I’d be happy to connect.</p></div>
+    <div><a class="btn" href="mailto:YOUR.EMAIL@example.com">Email me ↗</a><p style="font-size:.72rem;color:#28534d;margin:12px 0 0">Replace this placeholder with your email address.</p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© 2026 Mia Emmylia · Finance Portfolio</span><span>Built with curiosity, care & a little spreadsheet energy.</span></div></footer>
+<script>
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
